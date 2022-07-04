@@ -139,6 +139,8 @@ add_action( 'widgets_init', 'cat_widgets_init' );
  */
 function cat_scripts() {
 	wp_enqueue_style( 'cat-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'cat-block-style', get_stylesheet_directory_uri() . '/build/block/block.module.css', array(), _S_VERSION );
+
 	wp_style_add_data( 'cat-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'cat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -176,3 +178,80 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+  if ( ! function_exists( 'cat_register_block_category' ) ) {
+
+    // wordpress version check and load filter for block category
+
+    if( version_compare( $GLOBALS['wp_version'], '5.7', '<' ) ) {
+        add_filter( 'block_categories', 'cat_register_block_category', 10, 2 );
+    } else {
+        add_filter( 'block_categories_all', 'cat_register_block_category', 10, 2 );
+    }
+
+    /**
+     * Register custom category for blocks
+     */
+
+    function cat_register_block_category( $categories, $post ) {
+        return array_merge(
+            array(
+                array(
+                    'slug'  => 'custom-blocks',
+                    'title' => __( 'Custom Blocks', 'custom-blocks' ),
+                ),
+            ),
+            $categories,
+        );
+    }
+
+  }
+
+// Load block assets for wp-admin when editor is active
+function cat_gutenberg_assets() {
+	$blockPath = '/build/block';
+
+	wp_enqueue_script(
+		'cat_editor_script',
+		get_stylesheet_directory_uri() .$blockPath.'/editor.js',
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'  ),
+		filemtime( get_template_directory() . $blockPath )
+	);
+
+
+	wp_enqueue_style(
+		'cat_editor_style',
+		get_stylesheet_directory_uri() .$blockPath.'/editor.module.css',
+		array(),
+		filemtime( get_template_directory() . $blockPath )
+	);
+}
+
+add_action( 'enqueue_block_editor_assets', 'cat_gutenberg_assets' );
+
+function cat_custom_block_block_init() {
+
+	$blocks = [
+		'cat/hero1'
+	];
+
+	foreach($blocks as $block) {
+		register_block_type( $block, array(
+			'editor_script' => 'cat-editor-script',
+			'editor_style'  => 'cat-editor-style',
+			'style'         => 'cat-custom-block-style',
+    		)
+		);
+	};
+
+	wp_register_style(
+        'cat_block_style',
+       	get_stylesheet_directory_uri() . '/build/block/style.css',
+        array()
+        // filemtime( get_stylesheet_directory_uri() . 'style.css' )
+    );
+}
+
+add_action( 'init', 'cat_custom_block_block_init' );

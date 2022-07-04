@@ -1,0 +1,78 @@
+// Import variables and mixins.
+@import "../abstracts/abstracts";
+
+@mixin heroSection {
+	background-color: red;
+	background-size: cover;
+	background-position: top right;
+	position: relative;
+	.heroblock-title {
+		margin: 0 0 0.5rem;
+	}
+	.heroblock-upperTitle {
+		margin: 0 0 3.938rem;
+	}
+	& > .container {
+		display: flex;
+		align-items: flex-start;
+		position: relative;
+		gap: 1rem;
+		&.align--vertical {
+			flex-direction: column;
+			.column {
+				text-align: center;
+			}
+			.cat-bg__buttonWrapper {
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				@media (min-width: $tablet) {
+					flex-wrap: nowrap;
+				}
+			}
+		}
+	}
+	.heroblock-contentBox {
+		width: 47%;
+		&.has-box {
+			background-color: white;
+		}
+	}
+	.cat-bg__buttonWrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		&.align--horizontal {
+			flex-direction: row;
+			gap: 1rem;
+			@media (min-width: $tablet) {
+				gap: 4rem;
+			}
+		}
+		.cat-bg__button {
+			display: inline-flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 12px 25px;
+			gap: 10px;
+			min-width: 210px;
+			margin: 2.25rem 0 0;
+			border: 1px solid $black;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			&.dark {
+				background-color: $black;
+				color: $white;
+			}
+			&.light {
+				background-color: $white;
+				color: $black;
+			}
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}

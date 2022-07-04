@@ -1,0 +1,135 @@
+// Import variables and mixins.
+@import "./editor/heroblock";
+
+html {
+	@media (min-width: $mobile) {
+		font-size: 10px;
+	}
+	@media (min-width: $desktop) {
+		font-size: 14px;
+	}
+	@media (min-width: $big-desktop) {
+		font-size: 16px;
+	}
+}
+
+.heroblock {
+	&-section {
+		@include heroSection;
+	}
+	.container {
+		margin: 0 auto;
+		max-width: 100%;
+		padding: 4rem 1rem;
+		@media (min-width: $desktop) {
+			max-width: 80%;
+			padding: 7.125rem 2rem;
+			min-height: 46.875rem;
+		}
+		@media (min-width: $big-desktop) {
+			max-width: 88.125rem;
+		}
+		&.align--vertical {
+			.column {
+				padding: 0px 10rem;
+				&.heroblock-contentBox {
+					padding: 0px 2rem;
+					@media (min-width: $tablet) {
+						padding: 0px 14rem;
+					}
+				}
+			}
+		}
+	}
+	.heroblock-contentBox {
+		&.has-box {
+			max-width: 37.5rem;
+			background-color: white;
+			min-width: 37.5rem;
+			min-height: 27.5rem;
+			padding: 4rem 2rem;
+		}
+	}
+	.cat-bg__buttonWrapper {
+		.cat-bg__button {
+			padding: 12px 25px;
+			min-width: 210px;
+		}
+	}
+	.heroUpperTitle {
+		@include h1;
+	}
+	.heroblock-title {
+		@include h2;
+		margin: 0 0 2.815rem;
+	}
+	p {
+		@include p;
+	}
+	.heroblock-media {
+		margin: 2.25rem 0 0;
+	}
+	&.hero1a {
+		position: relative;
+		.container {
+			padding: 4rem 1rem 2rem;
+			@media (min-width: $desktop) {
+				padding: 12rem 2rem 6.5rem;
+			}
+			@media (min-width: $big-desktop) {
+				padding: 14rem 2rem 8.5rem;
+			}
+			.heroblock-contentBox {
+				width: 100% !important;
+				@media (min-width: $tablet) {
+					width: 47% !important;
+				}
+			}
+		}
+		.overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			will-change: position;
+			background-color: rgba(0, 0, 0, 0.35);
+		}
+		p {
+			color: white !important;
+		}
+	}
+	&.hero1d,
+	&.hero1e {
+		.container {
+			justify-content: center;
+		}
+		.cat-bg__button {
+			margin: 2rem 0 0;
+			@media (min-width: $tablet) {
+				margin: 5rem 0 0;
+			}
+		}
+	}
+	&.hero1e {
+		.cat-bg__button:nth-child(2) {
+			margin: 1rem 0 0;
+			@media (min-width: $tablet) {
+				margin: 1.875rem 0 0;
+			}
+		}
+		.overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			will-change: position;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+}

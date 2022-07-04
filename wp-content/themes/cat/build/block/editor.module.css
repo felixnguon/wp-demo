@@ -1,0 +1,180 @@
+@font-face {
+	font-family: "Aeonik";
+	src: url("../../../cat/assets/fonts/Aeonik-Regular.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Aeonik Medium";
+	src: url("../../../cat/assets/fonts/Aeonik-Medium.otf");
+	font-weight: normal;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+p {
+	font-family: "Aeonik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Aeonik Medium";
+}
+
+.heroblock-section {
+	background-color: red;
+	background-size: cover;
+	background-position: top right;
+	position: relative;
+}
+
+.heroblock-section .heroblock-title {
+	margin: 0 0 0.5rem;
+}
+
+.heroblock-section .heroblock-upperTitle {
+	margin: 0 0 3.938rem;
+}
+
+.heroblock-section > .container {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	gap: 1rem;
+}
+
+.heroblock-section > .container.align--vertical {
+	flex-direction: column;
+}
+
+.heroblock-section > .container.align--vertical .column {
+	text-align: center;
+}
+
+.heroblock-section > .container.align--vertical .cat-bg__buttonWrapper {
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+	.heroblock-section > .container.align--vertical .cat-bg__buttonWrapper {
+		flex-wrap: nowrap;
+	}
+}
+
+.heroblock-section .heroblock-contentBox {
+	width: 47%;
+}
+
+.heroblock-section .heroblock-contentBox.has-box {
+	background-color: white;
+}
+
+.heroblock-section .cat-bg__buttonWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.heroblock-section .cat-bg__buttonWrapper.align--horizontal {
+	flex-direction: row;
+	gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.heroblock-section .cat-bg__buttonWrapper.align--horizontal {
+		gap: 4rem;
+	}
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 25px;
+	gap: 10px;
+	min-width: 210px;
+	margin: 2.25rem 0 0;
+	border: 1px solid black;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button.dark {
+	background-color: black;
+	color: white;
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button.light {
+	background-color: white;
+	color: black;
+}
+
+.heroblock-section p {
+	margin-bottom: 0;
+}
+
+.heroblock .container {
+	margin: 0 auto;
+	max-width: 90%;
+	padding: 2rem;
+}
+
+.heroblock .container.align--vertical .column.heroblock-contentBox {
+	padding: 0px 5rem;
+	box-sizing: border-box;
+}
+
+.heroblock .container.align--vertical .column.heroblock-mediaWrapper img {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.heroblock .heroblock-contentBox {
+	padding: 2rem 1rem;
+}
+
+.heroblock .cat-bg__buttonWrapper .cat-bg__button {
+	padding: 10px 20px;
+	min-width: 100px;
+	font-size: 0.7rem !important;
+}
+
+.heroblock .heroblock-title {
+	font-size: 2.375rem;
+	color: black;
+	font-weight: 500;
+	font-size: 1.5rem !important;
+	margin: 0 0 1rem;
+}
+
+.heroblock p {
+	font-size: 1.5rem;
+	color: #858585;
+	font-size: 1rem !important;
+}
+
+.components-button-group {
+	margin: 0.5rem 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.components-select-control {
+	height: auto;
+}
+
+/*# sourceMappingURL=editor.module.css.map */

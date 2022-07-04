@@ -1,0 +1,297 @@
+@font-face {
+	font-family: "Aeonik";
+	src: url("../../../cat/assets/fonts/Aeonik-Regular.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Aeonik Medium";
+	src: url("../../../cat/assets/fonts/Aeonik-Medium.otf");
+	font-weight: normal;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+p {
+	font-family: "Aeonik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Aeonik Medium";
+}
+
+@media (min-width: 360px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 1681px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+.heroblock-section {
+	background-color: red;
+	background-size: cover;
+	background-position: top right;
+	position: relative;
+}
+
+.heroblock-section .heroblock-title {
+	margin: 0 0 0.5rem;
+}
+
+.heroblock-section .heroblock-upperTitle {
+	margin: 0 0 3.938rem;
+}
+
+.heroblock-section > .container {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	gap: 1rem;
+}
+
+.heroblock-section > .container.align--vertical {
+	flex-direction: column;
+}
+
+.heroblock-section > .container.align--vertical .column {
+	text-align: center;
+}
+
+.heroblock-section > .container.align--vertical .cat-bg__buttonWrapper {
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+	.heroblock-section > .container.align--vertical .cat-bg__buttonWrapper {
+		flex-wrap: nowrap;
+	}
+}
+
+.heroblock-section .heroblock-contentBox {
+	width: 47%;
+}
+
+.heroblock-section .heroblock-contentBox.has-box {
+	background-color: white;
+}
+
+.heroblock-section .cat-bg__buttonWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.heroblock-section .cat-bg__buttonWrapper.align--horizontal {
+	flex-direction: row;
+	gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.heroblock-section .cat-bg__buttonWrapper.align--horizontal {
+		gap: 4rem;
+	}
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 25px;
+	gap: 10px;
+	min-width: 210px;
+	margin: 2.25rem 0 0;
+	border: 1px solid black;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button.dark {
+	background-color: black;
+	color: white;
+}
+
+.heroblock-section .cat-bg__buttonWrapper .cat-bg__button.light {
+	background-color: white;
+	color: black;
+}
+
+.heroblock-section p {
+	margin-bottom: 0;
+}
+
+.heroblock .container {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 4rem 1rem;
+}
+
+@media (min-width: 1024px) {
+	.heroblock .container {
+		max-width: 80%;
+		padding: 7.125rem 2rem;
+		min-height: 46.875rem;
+	}
+}
+
+@media (min-width: 1681px) {
+	.heroblock .container {
+		max-width: 88.125rem;
+	}
+}
+
+.heroblock .container.align--vertical .column {
+	padding: 0px 10rem;
+}
+
+.heroblock .container.align--vertical .column.heroblock-contentBox {
+	padding: 0px 2rem;
+}
+
+@media (min-width: 768px) {
+	.heroblock .container.align--vertical .column.heroblock-contentBox {
+		padding: 0px 14rem;
+	}
+}
+
+.heroblock .heroblock-contentBox.has-box {
+	max-width: 37.5rem;
+	background-color: white;
+	min-width: 37.5rem;
+	min-height: 27.5rem;
+	padding: 4rem 2rem;
+}
+
+.heroblock .cat-bg__buttonWrapper .cat-bg__button {
+	padding: 12px 25px;
+	min-width: 210px;
+}
+
+.heroblock .heroUpperTitle {
+	font-size: 3.125rem;
+	color: black;
+	font-weight: 500;
+}
+
+.heroblock .heroblock-title {
+	font-size: 2.375rem;
+	color: black;
+	font-weight: 500;
+	margin: 0 0 2.815rem;
+}
+
+.heroblock p {
+	font-size: 1.5rem;
+	color: #858585;
+}
+
+.heroblock .heroblock-media {
+	margin: 2.25rem 0 0;
+}
+
+.heroblock.hero1a {
+	position: relative;
+}
+
+.heroblock.hero1a .container {
+	padding: 4rem 1rem 2rem;
+}
+
+@media (min-width: 1024px) {
+	.heroblock.hero1a .container {
+		padding: 12rem 2rem 6.5rem;
+	}
+}
+
+@media (min-width: 1681px) {
+	.heroblock.hero1a .container {
+		padding: 14rem 2rem 8.5rem;
+	}
+}
+
+.heroblock.hero1a .container .heroblock-contentBox {
+	width: 100% !important;
+}
+
+@media (min-width: 768px) {
+	.heroblock.hero1a .container .heroblock-contentBox {
+		width: 47% !important;
+	}
+}
+
+.heroblock.hero1a .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	will-change: position;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+.heroblock.hero1a p {
+	color: white !important;
+}
+
+.heroblock.hero1d .container, .heroblock.hero1e .container {
+	justify-content: center;
+}
+
+.heroblock.hero1d .cat-bg__button, .heroblock.hero1e .cat-bg__button {
+	margin: 2rem 0 0;
+}
+
+@media (min-width: 768px) {
+	.heroblock.hero1d .cat-bg__button, .heroblock.hero1e .cat-bg__button {
+		margin: 5rem 0 0;
+	}
+}
+
+.heroblock.hero1e .cat-bg__button:nth-child(2) {
+	margin: 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+	.heroblock.hero1e .cat-bg__button:nth-child(2) {
+		margin: 1.875rem 0 0;
+	}
+}
+
+.heroblock.hero1e .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	will-change: position;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=block.module.css.map */
